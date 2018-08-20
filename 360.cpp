@@ -87,7 +87,9 @@ int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR /*
 
         pRenderFactory->SetImgDecoderFactory(pImgDecoderFactory);
 
+	ISystemObjectRegister *pRegister = new CSystemObjectRegister();
         SApplication *theApp=new SApplication(pRenderFactory,hInstance,L"360demo",new CSystemObjectRegister());
+        pRegister->Release();
         
         theApp->RegisterWindowClass<STabPage2>();//注册STabPage2
         theApp->RegisterWindowClass<STabCtrl2>();//注册STabCtrl2
