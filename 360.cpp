@@ -55,6 +55,7 @@ public:
 		objFactory->TplRegisterFactory<SSkinImgFrame>();
 		objFactory->TplRegisterFactory<SSkinButton>();
 		objFactory->TplRegisterFactory<SSkinScrollbar>();
+		objFactory->TplRegisterFactory<SSkinImgCenter>();
 	}
 
 	void RegisterLayouts(SObjectFactoryMgr *objFactory)
