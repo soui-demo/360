@@ -32,21 +32,13 @@ public:
 		objFactory->TplRegisterFactory<SStatic>();
 		objFactory->TplRegisterFactory<SButton>();
 		objFactory->TplRegisterFactory<SImageWnd>();
-		objFactory->TplRegisterFactory<SProgress>();
 		objFactory->TplRegisterFactory<SImageButton>();
-		objFactory->TplRegisterFactory<SCheckBox>();
 		objFactory->TplRegisterFactory<SIconWnd>();
-		objFactory->TplRegisterFactory<SRadioBox>();
 		objFactory->TplRegisterFactory<SLink>();
 		objFactory->TplRegisterFactory<SGroup>();
-		objFactory->TplRegisterFactory<SAnimateImgWnd>();
-		objFactory->TplRegisterFactory<SScrollView>();
-		objFactory->TplRegisterFactory<SToggle>();
 		objFactory->TplRegisterFactory<SCaption>();
 		objFactory->TplRegisterFactory<STabCtrl>();
 		objFactory->TplRegisterFactory<STabPage>();
-		objFactory->TplRegisterFactory<SHeaderCtrl>();
-		objFactory->TplRegisterFactory<SListCtrl>();
 	}
 
 	void RegisterSkins(SObjectFactoryMgr *objFactory)
