@@ -22,7 +22,7 @@
 #endif
 
 //注册系统控件，只注册当前APP里需要的控件，可以减小静态链接生成的APP的体积。
-class CSystemObjectRegister : public TObjRefImpl<ISystemObjectRegister>
+class CSystemObjectRegister : public ISystemObjectRegister
 {
 public:
 	void RegisterWindows(SObjectFactoryMgr *objFactory)
@@ -80,9 +80,7 @@ int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR /*
 
         pRenderFactory->SetImgDecoderFactory(pImgDecoderFactory);
 
-	ISystemObjectRegister *pRegister = new CSystemObjectRegister();
-        SApplication *theApp=new SApplication(pRenderFactory,hInstance,L"360demo",new CSystemObjectRegister());
-        pRegister->Release();
+        SApplication *theApp=new SApplication(pRenderFactory,hInstance,L"360demo",CSystemObjectRegister());
         
         theApp->RegisterWindowClass<STabPage2>();//注册STabPage2
         theApp->RegisterWindowClass<STabCtrl2>();//注册STabCtrl2
