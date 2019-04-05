@@ -63,7 +63,7 @@ int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR /*
     
     int nRet = 0; 
     
-    SComMgr * pComMgr = new SComMgr;
+    SComMgr2 * pComMgr = new SComMgr2;
     //将程序的运行路径修改到项目所在目录所在的目录
     TCHAR szCurrentDir[MAX_PATH]={0};
     GetModuleFileName( NULL, szCurrentDir, sizeof(szCurrentDir) );

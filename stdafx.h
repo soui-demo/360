@@ -9,6 +9,10 @@
 #include <control/SMessageBox.h>
 #include <control/souictrls.h>
 
+#include <commask.h>
+#define SCOM_MASK (scom_mask_render_gdi|scom_mask_imgdecoder_gdip | scom_mask_translator)
+#include <commgr2.h>
+
 #include <com-cfg.h>
 
 #include "resource.h"
